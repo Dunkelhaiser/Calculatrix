@@ -11,7 +11,9 @@ const ThemeSwitcher = () => {
                 <FontAwesomeIcon
                     icon={faSun}
                     className={`cursor-pointer text-xl ${
-                        theme === "light" && !isSystem ? "text-stone-700" : "text-stone-300 dark:text-gray-500"
+                        theme === "light" && !isSystem
+                            ? "text-stone-700"
+                            : "text-stone-300 hover:text-stone-400 focus-visible:text-stone-400 dark:text-gray-500 hover:dark:text-gray-400 focus-visible:dark:text-gray-400"
                     }`}
                 />
             </button>
@@ -19,7 +21,9 @@ const ThemeSwitcher = () => {
                 <FontAwesomeIcon
                     icon={faMoon}
                     className={`cursor-pointer text-xl  ${
-                        theme === "dark" && !isSystem ? "dark:text-gray-100" : "text-stone-300 dark:text-gray-500"
+                        theme === "dark" && !isSystem
+                            ? "dark:text-gray-100"
+                            : "text-stone-300 hover:text-stone-400 focus-visible:text-stone-400 dark:text-gray-500 hover:dark:text-gray-400 focus-visible:dark:text-gray-400"
                     }`}
                 />
             </button>
@@ -27,7 +31,9 @@ const ThemeSwitcher = () => {
                 <FontAwesomeIcon
                     icon={faDisplay}
                     className={`cursor-pointer text-xl  ${
-                        isSystem ? "text-stone-700 dark:text-gray-100" : "text-stone-300 dark:text-gray-500"
+                        isSystem
+                            ? "text-stone-700 dark:text-gray-100"
+                            : "text-stone-300 hover:text-stone-400 focus-visible:text-stone-400 dark:text-gray-500 hover:dark:text-gray-400 focus-visible:dark:text-gray-400"
                     }`}
                 />
             </button>
