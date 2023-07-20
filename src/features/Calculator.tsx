@@ -31,7 +31,7 @@ const Calculator = () => {
                     <Button label="AC" color="red" onClick={clear} />
                     <Button label="C" color="red" onClick={remove} />
                     <Button label="%" color="red" onClick={addToExpression("%")} />
-                    {isExpanded && <Button label="/" color="red" onClick={setFraction} />}
+                    {isExpanded && <Button label="1/x" color="red" onClick={setFraction} />}
                     {isExpanded && <Button label="(" onClick={addToExpression("(")} />}
                     {isExpanded && <Button label=")" onClick={addToExpression(")")} />}
                     {isExpanded && <Button label="!" onClick={addToExpression("!")} />}
