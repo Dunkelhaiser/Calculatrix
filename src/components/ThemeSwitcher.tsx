@@ -7,7 +7,7 @@ const ThemeSwitcher = () => {
     const { theme, isSystem, setThemeDark, setThemeLight, setThemeSystem } = useContext(ThemeContext);
     return (
         <div className="absolute left-1/2 top-4 flex -translate-x-1/2 transform gap-6 rounded-xl bg-stone-50 px-4 py-2 dark:bg-dark-400">
-            <button className="appearance-none leading-none" onClick={setThemeLight}>
+            <button className="appearance-none leading-none" onClick={setThemeLight} aria-label="Light Theme">
                 <FontAwesomeIcon
                     icon={faSun}
                     className={`cursor-pointer text-xl ${
@@ -17,7 +17,7 @@ const ThemeSwitcher = () => {
                     }`}
                 />
             </button>
-            <button className="appearance-none leading-none" onClick={setThemeDark}>
+            <button className="appearance-none leading-none" onClick={setThemeDark} aria-label="Dark Theme">
                 <FontAwesomeIcon
                     icon={faMoon}
                     className={`cursor-pointer text-xl  ${
@@ -27,7 +27,7 @@ const ThemeSwitcher = () => {
                     }`}
                 />
             </button>
-            <button className="appearance-none leading-none" onClick={setThemeSystem}>
+            <button className="appearance-none leading-none" onClick={setThemeSystem} aria-label="System Theme">
                 <FontAwesomeIcon
                     icon={faDisplay}
                     className={`cursor-pointer text-xl  ${

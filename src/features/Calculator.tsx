@@ -49,8 +49,9 @@ const Calculator = () => {
                     <Button label="3" onClick={addToExpression("3")} />
                     {isExpanded && <Button label="||" onClick={setModule} />}
                     <Button
-                        label={isExpanded === false ? <FontAwesomeIcon icon={faExpand} /> : <FontAwesomeIcon icon={faMinimize} />}
+                        label={!isExpanded ? <FontAwesomeIcon icon={faExpand} /> : <FontAwesomeIcon icon={faMinimize} />}
                         onClick={setIsExpanded()}
+                        ariaLabel={!isExpanded ? "Expand" : "Minimize"}
                     />
                     <Button label="0" onClick={addToExpression("0")} />
                     <Button label="." onClick={addToExpression(".")} />

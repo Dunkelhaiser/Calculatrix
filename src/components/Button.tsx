@@ -3,9 +3,10 @@ interface Props {
     color?: "teal" | "red" | "gray";
     onClick?: () => void;
     type?: "button" | "submit" | "reset";
+    ariaLabel?: string;
 }
 
-const Button = ({ label, color, onClick, type = "button" }: Props) => {
+const Button = ({ label, color, onClick, type = "button", ariaLabel }: Props) => {
     return (
         <button
             onClick={onClick}
@@ -18,6 +19,7 @@ const Button = ({ label, color, onClick, type = "button" }: Props) => {
                     : "text-stone-700 dark:text-gray-100"
             } hover:bg-stone-200 focus-visible:bg-stone-200 active:bg-zinc-100 
             dark:bg-dark-500 dark:hover:bg-dark-800 dark:focus-visible:bg-dark-800 dark:active:bg-dark-300`}
+            aria-label={ariaLabel}
         >
             {label}
         </button>
