@@ -19,7 +19,8 @@
         "mathjs": "^11.9.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "react-font-size-by-text-length": "^0.1.0"
+        "react-font-size-by-text-length": "^0.1.0",
+        "vite-plugin-pwa": "^0.16.4"
     },
     "devDependencies": {
         "@tanstack/eslint-plugin-query": "^4.29.9",
