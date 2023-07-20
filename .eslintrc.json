@@ -40,7 +40,6 @@
         "react/self-closing-comp": "warn",
         "jsx-a11y/click-events-have-key-events": "off",
         "jsx-a11y/anchor-is-valid": "off",
-        "import/prefer-default-export": "off",
-        "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
+        "import/prefer-default-export": "off"
     }
 }

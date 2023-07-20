@@ -6,7 +6,7 @@ interface Props {
     ariaLabel?: string;
 }
 
-const Button = ({ label, color, onClick, type = "button", ariaLabel }: Props) => {
+const Button = ({ label, color = "gray", onClick, type = "button", ariaLabel }: Props) => {
     return (
         <button
             onClick={onClick}

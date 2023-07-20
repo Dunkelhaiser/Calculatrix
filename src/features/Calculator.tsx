@@ -2,8 +2,8 @@ import { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExpand, faMinimize, faShuffle } from "@fortawesome/free-solid-svg-icons";
 import { ReactFontSizeByTextLength } from "react-font-size-by-text-length";
-import Button from "../components/Button";
-import useToggle from "../hooks/useToggle";
+import Button from "../components/Button/Button";
+import useToggle from "../hooks/useToggle/useToggle";
 import ThemeSwitcher from "../components/ThemeSwitcher";
 import { CalculatorContext } from "../context/CalculatorContext";
 
@@ -50,7 +50,7 @@ const Calculator = () => {
                     {isExpanded && <Button label="||" onClick={setModule} />}
                     <Button
                         label={!isExpanded ? <FontAwesomeIcon icon={faExpand} /> : <FontAwesomeIcon icon={faMinimize} />}
-                        onClick={setIsExpanded()}
+                        onClick={() => setIsExpanded()}
                         ariaLabel={!isExpanded ? "Expand" : "Minimize"}
                     />
                     <Button label="0" onClick={addToExpression("0")} />
