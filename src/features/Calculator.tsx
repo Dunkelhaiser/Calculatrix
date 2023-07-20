@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExpand, faMinimize, faShuffle } from "@fortawesome/free-solid-svg-icons";
 import { ReactFontSizeByTextLength } from "react-font-size-by-text-length";
-import Button from "../components/Button";
+import Button from "../components/Button/Button";
 import useToggle from "../hooks/useToggle/useToggle";
 import ThemeSwitcher from "../components/ThemeSwitcher";
 import { CalculatorContext } from "../context/CalculatorContext";
