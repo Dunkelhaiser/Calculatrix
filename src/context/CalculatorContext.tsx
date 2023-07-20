@@ -1,4 +1,5 @@
 import React, { createContext, useEffect, useMemo, useState } from "react";
+import { evaluate } from "mathjs";
 
 interface ICalculatorContext {
     expression: string;
@@ -85,13 +86,6 @@ const CalculatorContextProvider: React.FC<{ children: React.ReactNode }> = ({ ch
         }
     };
 
-    const calculate = () => {
-        try {
-            setResult(1);
-            setExpression("1");
-        } catch (err) {}
-    };
-
     const clear = () => {
         setExpression("");
     };
@@ -103,6 +97,30 @@ const CalculatorContextProvider: React.FC<{ children: React.ReactNode }> = ({ ch
             setExpression(expression.slice(0, -1));
         }
     };
+
+    const evaluation = () => {
+        const evaluated: number = evaluate(
+            expression
+                .replaceAll("÷", "/")
+                .replaceAll(/√(\d+|e|π|\((.+?)\))/g, "sqrt($1)")
+                .replaceAll(/\|([^|]+)\|/g, "abs($1)")
+                .replaceAll("π", "pi")
+                .replaceAll("/0", "NaN")
+        );
+        return typeof evaluated === "number" ? evaluated : NaN;
+    };
+
+    const calculate = () => {
+        try {
+            if (expression.length > 0) setExpression(evaluation().toString());
+        } catch (err) {}
+    };
+
+    useEffect(() => {
+        try {
+            setResult(evaluation());
+        } catch (err) {}
+    }, [expression]);
 
     const handleKeyDown = (e: KeyboardEvent) => {
         const allowedKeys = new Set(["^", "+", "-", "*", ".", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "%", "!", "(", ")"]);
