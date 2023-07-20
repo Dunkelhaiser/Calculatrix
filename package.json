@@ -10,6 +10,7 @@
         "lint:fix": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix",
         "format": "prettier --write \"src/**/*.{ts,tsx}\"",
         "test": "vitest",
+        "test:run": "vitest --run",
         "coverage": "vitest --coverage",
         "preview": "vite preview",
         "prepare": "husky install"
