@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <img src="https://github.com/KaeserOfHonour/Calculatrix/blob/main/images/Logo.png?raw=true" alt="Logo" width="80" height="80">
 
   <h3 align="center">Calculatrix</h3>
 
