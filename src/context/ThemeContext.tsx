@@ -25,46 +25,44 @@ const ThemeContextProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     const [isSystem, setIsSystem] = useState<boolean>(false);
     const [isLoading, setIsLoading] = useState(true);
 
+    const setThemeHandler = (selectedTheme: Theme) => {
+        setTheme(selectedTheme);
+        document.querySelector('meta[name="theme-color"]')?.setAttribute("content", selectedTheme === "dark" ? "#1a1c22" : "#e7e7e7");
+        localStorage.setItem("theme", JSON.stringify(selectedTheme));
+    };
+
     const setThemeDark = () => {
-        setTheme("dark");
+        setThemeHandler("dark");
         setIsSystem(false);
-        document.querySelector('meta[name="theme-color"]')?.setAttribute("content", "#1a1c22");
-        localStorage.setItem("theme", JSON.stringify("dark"));
     };
 
     const setThemeLight = () => {
-        setTheme("light");
+        setThemeHandler("light");
         setIsSystem(false);
-        document.querySelector('meta[name="theme-color"]')?.setAttribute("content", "#e7e7e7");
-        localStorage.setItem("theme", JSON.stringify("light"));
     };
 
     const setThemeSystem = () => {
-        setTheme("system");
+        setThemeHandler("system");
         setIsSystem(true);
-        localStorage.setItem("theme", JSON.stringify("system"));
     };
 
     useEffect(() => {
         if (theme === "dark") {
             document.querySelector('meta[name="theme-color"]')?.setAttribute("content", "#1a1c22");
-            setIsLoading(false);
         } else if (theme === "light") {
             document.querySelector('meta[name="theme-color"]')?.setAttribute("content", "#e7e7e7");
-            setIsLoading(false);
         } else if (theme === "system" || theme === null) {
             if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
                 setTheme("dark");
                 setIsSystem(true);
                 document.querySelector('meta[name="theme-color"]')?.setAttribute("content", "#1a1c22");
-                setIsLoading(false);
             } else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
                 setTheme("light");
                 setIsSystem(true);
                 document.querySelector('meta[name="theme-color"]')?.setAttribute("content", "#e7e7e7");
-                setIsLoading(false);
             }
         }
+        setIsLoading(false);
     }, [theme]);
 
     const values = useMemo(
