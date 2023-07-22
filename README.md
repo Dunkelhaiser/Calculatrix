@@ -32,8 +32,6 @@
 
 ## About The Project
 
-![](images/LargeDark.png)
-
 ### Built With
 
 -   [![Vite][Vitejs]][Vite-url]
