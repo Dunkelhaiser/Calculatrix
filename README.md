@@ -46,6 +46,10 @@
 ![](images/sceenshots/../Screenshots/PhoneLight.png)
 ![](images/sceenshots/../Screenshots/PhoneLight2.png)
 
+## Attribution
+
+Design inspired by [Lucia Scott](https://dribbble.com/shots/14709020-Calculator)
+
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://react.dev/
 [Tailwindcss]: https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
