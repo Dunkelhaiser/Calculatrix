@@ -9,11 +9,11 @@
     Simple, functional, responsive, calculator web app.
     <br />
     <br />
-    <a href="https://calculatrix.netlify.app">Live View</a>
+    <a href="https://calculatrix.pages.dev">Live View</a>
     ·
-    <a href="https://github.com/KaeserOfHonour/Calculatrix/issues">Report Bug</a>
+    <a href="https://github.com/Dunkelhaiser/Calculatrix/issues">Report Bug</a>
     ·
-    <a href="https://github.com/KaeserOfHonour/Calculatrix/issues">Request Feature</a>
+    <a href="https://github.com/Dunkelhaiser/Calculatrix/issues">Request Feature</a>
   </p>
 </div>
 
